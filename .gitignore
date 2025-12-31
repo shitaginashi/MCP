@@ -1,0 +1,26 @@
+# --- SYSTEM ---
+.venv/
+__pycache__/
+*.log
+/bak/
+
+# --- PERSONAL DATA (VERBOTEN) ---
+# Branding and Personal Specs
+dsop_branding_v1.yml
+annum.yml
+api_credentials.yml
+power_history.yml
+
+# Personal Schedules (Stay Local)
+*schedule.yml
+2026-Q1.yml
+202*-Q*.yml
+
+# --- LARGE ASSETS ---
+/depot/
+/gator/
+
+# --- WHITELIST ---
+# We allow /support scripts and the core agent logic
+!/agents/support/
+!requirements.txt
