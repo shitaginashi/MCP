@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hydra Mark II: Operational Calendar</title>
+    <style>
+        body { font-family: 'Courier New', monospace; background: #1a1a1a; color: #00ff00; padding: 20px; }
+        .calendar-section { border: 2px solid #00ff00; padding: 15px; margin-bottom: 30px; background: #000; }
+        .calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; text-align: center; }
+        .day { border: 1px solid #333; padding: 10px; min-height: 80px; font-size: 0.7em; }
+        .day-header { font-weight: bold; border-bottom: 1px solid #00ff00; margin-bottom: 5px; }
+        .task-dot { color: #ffff00; display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+        
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+        .card { border: 1px solid #333; padding: 15px; background: #252525; }
+        .status-G { color: #00ff00; } .status-R { color: #ff0000; }
+        .progress-bar { background: #444; height: 8px; width: 100%; border-radius: 4px; }
+        .progress-fill { background: #00ff00; height: 100%; }
+        h1, h2 { border-bottom: 2px solid #00ff00; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+    <h1>Hydra Operational Command</h1>
+
+    <h2>January 2026 Calendar</h2>
+    <div class="calendar-section">
+        <div class="calendar-grid">
+            <div class="day-header">SUN</div><div class="day-header">MON</div><div class="day-header">TUE</div>
+            <div class="day-header">WED</div><div class="day-header">THU</div><div class="day-header">FRI</div><div class="day-header">SAT</div>
+            
+            {% for day in range(1, 32) %}
+            <div class="day">
+                <div style="font-size: 1.2em;">{{ day }}</div>
+                {% for r in reports if r.display_name == '2026-Q1.yml' %}
+                    {% for task in r.scheduled_tasks %}
+                        {% if task.date_day == day %}
+                            <span class="task-dot" title="{{ task.name }}">⚡ {{ task.name }}</span>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <h2>Active Units</h2>
+    <div class="project-grid">
+        {% for r in reports %}
+        <div class="card">
+            <h3 class="status-{{ r.status }}">{{ r.display_name }}</h3>
+            <p>Health: {{ r.progress }}%</p>
+            <div class="progress-bar"><div class="progress-fill" style="width: {{ r.progress }}%"></div></div>
+            {% if r.alert_msg %}<p class="status-R">⚠️ {{ r.alert_msg }}</p>{% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
