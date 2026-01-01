@@ -1,0 +1,49 @@
+project_metadata:
+  name: domina_cli
+  display_name: Domina CLI (The Hand & Voice)
+  type: project
+  status: active
+  last_updated: '2025-12-28 21:00' 
+
+milestones:
+  - mark: Mark I (The Executor)
+    status: Near Completion
+    requirements:
+      - name: Core Execution
+        deliverables:
+          - task: Playbook Parsing Logic
+            status: Complete
+            notes: Domina now handles Immortal plays and Schedules with RRULE support.
+          - task: Subprocess Shell Bridge
+            status: Complete
+            notes: Successfully executing system commands via .run_play().
+      - name: The Chronicler
+        deliverables:
+          - task: Status Reporting
+            status: Complete
+            notes: G/Y/R ANSI coloring and Agenda head are functional.
+          - task: Evolutionary Note Injection
+            status: Incomplete
+            notes: Needs to move from terminal print to YAML "logs" persistence.
+
+  - mark: Mark II (The Narrator)
+    status: Active
+    requirements:
+      - name: Temporal Awareness
+        deliverables:
+          - task: Windowed Auditing
+            status: Incomplete
+            notes: Ability to query R-status counts across custom date ranges.
+      - name: Natural Language Bridge
+        deliverables:
+          - task: Status Narrative Prompt
+            status: Incomplete
+            notes: A template that feeds YAML stats into the LLM for NL reporting.
+          - task: Proactive Anomaly Detection
+            status: Incomplete
+            notes: Logic to trigger "Narrator Mode" when failure trends increase.
+
+logs:
+  user_notes:
+    - date: "2025-12-28"
+      content: "Validated Agenda RRULE logic. Established G/Y/R color standard. Initiated Mark II Roadmap for NL Narrator mode."

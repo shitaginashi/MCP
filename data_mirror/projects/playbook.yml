@@ -1,0 +1,58 @@
+plays:
+  pulse_strike:
+    description: "Standard engagement loop: Post + Analytics Hook."
+    lanes:
+      - lane: system
+        action: "POST_STRIKE"
+        pillar_preference: "P3"
+      - lane: sage_hooks
+        action: "ANALYTICS_COLLECTION"
+        offset_days: 1
+
+immortal_plays:
+  - id: "heartbeat"
+    cmd: "python3 ~/agents/domina.py update_timestamp"
+    desc: "Syncs the last_updated metric across all active heads."
+
+  - id: "sync_heads"
+    cmd: "rsync -avz --exclude 'playbook.yml' /data/projects/ pusheen:/data/projects/"
+    desc: "Mirrors project data from Kuro to Pusheen. Excludes local playbook."
+
+  - id: "push_heads"
+    cmd: "rsync -avzu /data/projects/ kuma@pusheen:/data/projects/"
+    desc: "Update Pusheen with Kuro's newest files."
+
+  - id: "pull_heads"
+    cmd: "rsync -avzu kuma@pusheen:/data/projects/ /data/projects/"
+    desc: "Update Kuro with Pusheen's newest files."
+
+  - id: "janitor"
+    cmd: "mkdir -p /data/projects/archive && mv /data/projects/*.bak /data/projects/archive/ 2>/dev/null || true"
+    desc: "Sweeps legacy backup files into the archive."
+
+schedules:
+  - id: "yt_main"
+    task: "Release Video + Promo"
+    platform: "YouTube/X/FB"
+    rule: "FREQ=MONTHLY;BYDAY=4TH;INTERVAL=1"
+    requires_wake: false
+  - id: "mastodon_wip"
+    task: "Post WIP Update"
+    platform: "Mastodon"
+    rule: "FREQ=WEEKLY;BYDAY=MO;INTERVAL=2"
+    requires_wake: true
+  - id: "wip_post"
+    task: "Review WIP for bsky/X"
+    platform: "Manual"
+    rule: "FREQ=WEEKLY;BYDAY=MO,WE,FR"
+    requires_wake: false
+  - id: "weekly_sync"
+    task: "Full Project Sync to Shiro"
+    platform: "Internal"
+    rule: "FREQ=WEEKLY;BYDAY=SU"
+    requires_wake: true
+  - id: "weekly_backup"
+    task: "Full Sync to Pusheen"
+    platform: "Internal"
+    rule: "FREQ=WEEKLY;BYDAY=MO,WE,FR" # This will definitely hit this week
+    requires_wake: false

@@ -1,0 +1,35 @@
+project_metadata:
+  display_name: "Headhunter Strike Team"
+  agent_role: "Scraping & Lead Discovery"
+  status: "G"
+  last_updated: "2025-12-31 22:00"
+
+milestones:
+  - mark: "Mark 1: The Extraction Engine"
+    status: "Complete"
+    requirements:
+      - task: "Multi-Source Scraping"
+        status: "Complete"
+        deliverables:
+          - task: "Keyword-based lead discovery"
+            status: "Complete"
+          - task: "Raw HTML/JSON response parsing"
+            status: "Complete"
+      - task: "Data Sanitization"
+        status: "Complete"
+        deliverables:
+          - task: "Duplicate detection"
+            status: "Complete"
+          - task: "Source-to-Sisyphus piping"
+            status: "Complete"
+            notes: "Outputs raw feeds to /data/projects/sisyphus_feed.jsonl"
+
+  - mark: "Mark 2: Precision Hunting"
+    status: "Active"
+    requirements:
+      - task: "Domain Specialization"
+        status: "In-Progress"
+        deliverables:
+          - task: "Project-specific keyword sets"
+            status: "Pending"
+            notes: "Requires integration with seo-dsop and seo-tide ledgers."

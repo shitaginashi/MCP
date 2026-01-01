@@ -1,0 +1,74 @@
+#
+# MARK 3 COMPLIANT CONFIGURATION FILE: branding.yml
+# Digital Strategy & Operations Policy (DSOP)
+# This file governs all branding, SEO, and content generation policies.
+#
+brand_name: "Darker Side of Passion"
+brand_identity:
+  mission_statement: "To produce high-quality, AI-driven digital art and storytelling that explores the unsettling and philosophical depths of human existence, mythos, and the unknown."
+  motto: "The shadows contain truths too profound for the light."
+  brand_persona: "A knowledgeable curator of cosmic horror and a philosophical guide to the unknown. The voice is authoritative, mysterious, contemplative, and evocative."
+  brand_voice_attributes:
+    primary_tone: "Authoritative & Mysterious"
+    secondary_tone: "Contemplative & Philosophical"
+    tertiary_tone: "Evocative & Dread-Filled"
+    avoid:
+      - "Sensationalism"
+      - "Overtly humorous or lighthearted language"
+      - "Trivialization of themes"
+  brand_pillars:
+    - "Cosmic Horror & Existentialism"
+    - "AI as a Creative & Explanatory Tool"
+    - "High-Fidelity, Cinematic Storytelling"
+content_strategy:
+  target_audience:
+    demographics: "Adults aged 25-45, globally. Gender-neutral."
+    psychographics:
+      - "Intellectually curious and drawn to dark, complex themes."
+      - "Fans of cosmic horror literature (Lovecraft) and philosophical sci-fi."
+      - "Interested in the intersection of technology and art, including AI and generative media."
+      - "Seek content that is thought-provoking and emotionally resonant, not just entertaining."
+seo_and_platform_guidelines:
+  core_keywords:
+    - "Cosmic Horror"
+    - "H.P. Lovecraft"
+    - "Existential Dread"
+    - "AI Generated Animation"
+    - "Apocalyptic Art"
+    - "ComfyUI"
+    - "Lovecraftian"
+    - "Weird Fiction"
+  long_tail_keywords:
+    - "AI Lovecraft talking about world is doomed"
+    - "Cosmic horror short film"
+    - "Existential dread animation"
+    - "ComfyUI workflow tutorial"
+    - "Pessimistic philosophy and art"
+  hashtags:
+    primary:
+      - "#CosmicHorror"
+      - "#Lovecraftian"
+      - "#ExistentialDread"
+    secondary:
+      - "#WeirdFiction"
+      - "#ComfyUI"
+      - "#ApocalypticArt"
+      - "#NicheContent"
+    boilerplate:
+      - "#DarkerSide0Passion"
+      - "#DS0P"
+      - "#Ledante"
+  calls_to_action:
+    youtube: "Like, subscribe, and share with a fellow seeker of the dark truths. Leave a comment below with your thoughts on our doomed reality."
+    social_media: "Follow the shadows for more explorations of the unknown. #DarkerSide0Passion"
+  platform_specific_notes:
+    youtube: "Emphasize high-quality visuals and sound. Use both core and long-tail keywords in titles, descriptions, and tags. Include a pinned comment with a thought-provoking question."
+    social_media: "Use primary and secondary hashtags to maximize reach. Promote behind-the-scenes content or stills from the animation to engage a tech-savvy audience."
+technical_specifications:
+  content_format: "Video (.mp4, .mov)"
+  resolution: "4K (3840x2160)"
+  frame_rate: "60fps"
+  software:
+    - "ComfyUI (core)"
+    - "Various AI models and custom nodes"
+    - "Video editing software (e.g., DaVinci Resolve)"

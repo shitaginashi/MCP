@@ -1,0 +1,92 @@
+project_metadata:
+  name: maestro-cli.py
+  display_name: Maestro CLI
+  type: project
+  status: active
+  last_updated: '2025-12-31 15:15' 
+
+milestones:
+  - mark: "Mark I: Core Prompt Architecture"
+    status: "Incomplete"
+    requirements:
+      - name: "Multimodal Prompt Generation"
+        status: "Incomplete"
+        deliverables:
+          - task: "Prompt from Keywords"
+            status: "Complete"
+          - task: "Refactor Prompt"
+            status: "Complete"
+          - task: "Settings Auditor"
+            status: "Incomplete"
+            notes: "Scope: Verify Sampler/CFG logic. Dependent on settings_auditor.yaml"
+      - name: "Keyframe and Video Prompting Modes"
+        status: "Complete"
+        deliverables:
+          - task: "t2i mode (FLUX optimized)"
+            status: "Complete"
+          - task: "i2v mode (WAN 2.2 optimized)"
+            status: "Complete"
+      - name: "Dependency Management"
+        status: "Complete"
+        deliverables:
+          - task: "Source Asset Library"
+            status: "Complete"
+            notes: "Dependency: source.yaml"
+
+  - mark: "Mark II: Style and State Control"
+    status: "Incomplete"
+    requirements:
+      - name: "Style YAML Engine"
+        status: "Incomplete"
+        deliverables:
+          - task: "Support for Individual Styles"
+            status: "Complete"
+            notes: "Dependency: profiles/ [directory]"
+          - task: "Style YAML Template"
+            status: "Complete"
+          - task: "Dynamic Style Swapping"
+            status: "Incomplete"
+      - name: "Enhanced i2v Mode"
+        status: "Complete"
+        deliverables:
+          - task: "Multi-Prompt Support"
+            status: "Complete"
+          - task: "LoRA Integration Support"
+            status: "Complete"
+            notes: "i2v mode now explicitly accepts -l flag for motion LoRAs."
+      - name: "VRAM Management"
+        status: "Complete"
+        deliverables:
+          - task: "Sleep Mode (Snooze)"
+            status: "Complete"
+            notes: "Dependency: .Maestro_session.yaml"
+
+  - mark: "Mark III: Expansion and Intelligence"
+    status: "Incomplete"
+    requirements:
+      - name: "LoRA Support"
+        status: "Incomplete"
+        deliverables:
+          - task: "LoRA Logic / Flag System"
+            status: "Incomplete"
+          - task: "LoRA YAML Database"
+            status: "Complete"
+            notes: "Dependency: loras.yaml"
+      - name: "Image Interrogation"
+        status: "Incomplete"
+        deliverables:
+          - task: "Discrete Interrogation Agent"
+            status: "Incomplete"
+          - task: "Communication Protocol"
+            status: "Incomplete"
+
+  - mark: "Mark IV: Inference Integration"
+    status: "Incomplete"
+    requirements:
+      - name: "Gemma 3 Brain Graft"
+        status: "Incomplete"
+        deliverables:
+          - task: "llama-cpp-python Bridge"
+            status: "Incomplete"
+          - task: "Context Synthesis Refinement"
+            status: "Incomplete"

@@ -1,0 +1,87 @@
+"2025-12-21":
+  annum:
+    - "Lisa - Birthday"
+  sage_hooks: []
+  system: []
+  user: []
+
+"2025-12-24":
+  alerts:
+    - "Lisa - Birthday"
+    - "14:00 - Dental Appointment"
+  system:
+    - "Scrape 01:00 - G"
+    - "Scrape 07:00 - R"
+    - "Scrape 13:00 - Y"
+    - "Scrape 22:00 - Y"
+  user:
+    - "Project Domina - Update Dashboard Logic"
+    - "Review Wan 2.1 Settings"
+
+"2025-12-25":
+  annum:
+    - "Christmas Day"
+  sage_hooks: []
+  system: []
+  user: []
+
+"2025-12-26":
+  system:
+    - "Scrape 01:00 - Y"
+    - "Scrape 07:00 - Y"
+    - "Scrape 13:00 - Y"
+    - "Scrape 22:00 - Y"
+
+"2025-12-27":
+  system:
+    - "Scrape 01:00 - Y"
+    - "Scrape 07:00 - Y"
+    - "Scrape 13:00 - Y"
+    - "Scrape 22:00 - Y"
+  user:
+    - "nooner with Chloe"
+
+"2025-12-28":
+  system:
+    - "Scrape 01:00 - Y"
+    - "Scrape 07:00 - Y"
+    - "Scrape 13:00 - Y"
+    - "Scrape 22:00 - Y"
+
+"2025-12-29":
+  system:
+    - "Scrape 01:00 - Y"
+    - "Scrape 07:00 - Y"
+    - "Scrape 13:00 - Y"
+    - "Scrape 22:00 - Y"
+
+"2025-12-30":
+  system:
+    - "Scrape 01:00 - Y"
+    - "Scrape 07:00 - Y"
+    - "Scrape 13:00 - Y"
+    - "Scrape 22:00 - Y"
+  user:
+    - "almost done"
+
+system_events:
+  - id: "intel_01"
+    last_update: "2025-12-25T04:00:13.302145"
+    status: "G"
+    task: "headhunter"
+    trigger_hour: 4
+  - id: "intel_07"
+    last_update: null
+    status: "Y"
+    task: "headhunter"
+    trigger_hour: 7
+  - id: "intel_13"
+    last_update: "2025-12-23T13:00:13.219245"
+    status: "G"
+    task: "headhunter"
+    trigger_hour: 13
+  - id: "intel_19"
+    last_update: null
+    status: "Y"
+    task: "headhunter"
+    trigger_hour: 19

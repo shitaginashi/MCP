@@ -1,0 +1,65 @@
+project_metadata:
+  name: dominus
+  display_name: Dominus (Commander)
+  status: active
+  last_scanned: '2025-12-22'
+  last_updated: 2025-12-30 04:04
+milestones:
+- mark: 'Mark I: Core Engine'
+  status: Complete
+  deliverables:
+  - task: Parse Output Path & PROJ_DIR
+    focus_profile: Deep
+    est_hours: 8.0
+    hours_done: 8.0
+  - task: Weekly Calendar HTML Generation
+    focus_profile: Deep
+    est_hours: 12.0
+    hours_done: 12.0
+  - task: HTML Boilerplate & CSS Linkage
+    focus_profile: Deep
+    est_hours: 4.0
+    hours_done: 4.0
+  - task: Call ai-sage.py (Legacy)
+    focus_profile: Deep
+    est_hours: 8.0
+    hours_done: 8.0
+  - task: Write Final HTML File
+    focus_profile: Deep
+    est_hours: 4.0
+    hours_done: 4.0
+- mark: 'Mark II: Structural Refactor (Flat)'
+  status: Incomplete
+  deliverables:
+  - task: Migrate JSON to YAML Native
+    focus_profile: Deep
+    est_hours: 4.0
+    hours_done: 4.0
+    notes: Eliminated nested Matryoshka requirements.
+  - task: Class-based Python Transition
+    focus_profile: Deep
+    est_hours: 6.0
+    hours_done: 6.0
+  - task: Implement Kuro-Web (Python Server)
+    focus_profile: Maintenance
+    est_hours: 2.0
+    hours_done: 2.0
+  - task: Split Dashboard from Domina Core
+    focus_profile: Deep
+    est_hours: 5.0
+    hours_done: 1.0
+- mark: 'Mark III: Strategic Matrix'
+  status: Incomplete
+  deliverables:
+  - task: Modal Query Logic (Quick vs Deep)
+    focus_profile: Deep
+    est_hours: 10.0
+    hours_done: 0
+  - task: Focus Profile Calculation (Deep/Maint)
+    focus_profile: Deep
+    est_hours: 6.0
+    hours_done: 0
+  - task: Multi-Project Grid Dashboard
+    focus_profile: Maintenance
+    est_hours: 8.0
+    hours_done: 0

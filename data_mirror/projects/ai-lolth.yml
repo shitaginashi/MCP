@@ -1,0 +1,32 @@
+project_metadata:
+  display_name: "Lolth Weaver"
+  agent_role: "Multi-Platform Distribution"
+  status: "G"
+  last_updated: "2025-12-31 21:30"
+
+milestones:
+  - mark: "Mark 1: Protocol Handshakes"
+    status: "Complete"
+    requirements:
+      - task: "Social API Integration"
+        status: "Complete"
+        deliverables:
+          - task: "Mastodon status_post implementation"
+            status: "Complete"
+          - task: "ATProto/BlueSky client login"
+            status: "Complete"
+      - task: "Credential Isolation"
+        status: "Complete"
+        deliverables:
+          - task: "DOTENV vault loading logic"
+            status: "Complete"
+            notes: "Migrated to /data/projects/.env"
+
+  - mark: "Mark 2: Orchestration"
+    status: "Active"
+    requirements:
+      - task: "Sisyphus-to-Lolth Bridge"
+        status: "Complete"
+        deliverables:
+          - task: "Superset JSON payload parsing"
+            status: "Complete"

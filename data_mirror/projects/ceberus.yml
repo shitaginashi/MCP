@@ -1,0 +1,24 @@
+project_metadata:
+  name: cerberus
+  display_name: Cerberus (The Gatekeeper)
+  type: project
+  status: active
+  last_updated: '2025-12-27 13:30'
+
+milestones:
+  - mark: Mark I (Schedule Recovery)
+    status: Complete
+    requirements:
+      - name: Automated Healing
+        deliverables:
+          - task: YAML Regeneration Logic
+            status: Complete
+            notes: Cerberus restores missing project files from internal cache.
+  - mark: Mark II (The Hydra Link)
+    status: Incomplete
+    requirements:
+      - name: Cross-Host Mirroring
+        deliverables:
+          - task: Sync Projects to Pusheen
+            status: Incomplete
+            notes: Pushing /data/projects/ to .166 for redundancy.

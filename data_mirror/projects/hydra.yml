@@ -1,0 +1,49 @@
+project_metadata:
+  name: hydra
+  display_name: Hydra (Sovereign Architecture)
+  status: G
+  last_scanned: '2025-12-26'
+  last_updated: 2025-12-30 04:04
+milestones:
+- mark: Mark I (Infrastructure)
+  status: Complete
+  requirements:
+  - name: Path Stabilization
+    deliverables:
+    - task: Establish /data/ Root for Projects and Reports
+      status: Complete
+      notes: Data drive mapped as source of truth.
+  - name: Environment Lockdown
+    deliverables:
+    - task: Kuro/Pusheen Host Mapping
+      status: Complete
+      notes: Static IPs pinned in /etc/hosts for cross-host stability.
+- mark: Mark II (Sovereignty)
+  status: Incomplete
+  requirements:
+  - name: Head Separation
+    deliverables:
+    - task: Decentralize Logic (Sage vs Painter)
+      status: Complete
+      notes: Presentation layer no longer handles project math.
+    - task: The Immortal Head Protocol
+      status: Incomplete
+      notes: Define read-only core plays vs dynamic evolving plays.
+  - name: Cross-Host Communication
+    deliverables:
+    - task: Lib Agent SSH Handshake
+      status: Incomplete
+      notes: Enable Kuro to trigger plays on Pusheen without hanging.
+logs:
+  user_notes:
+  - date: '2025-12-26'
+    content: IP conflict between .166 and .172 resolved via manual host mapping.
+  fifo:
+  - ts: 2025-12-30 04:04
+    task: heartbeat
+    status: G
+    msg: Success
+  - ts: 2025-12-30 04:04
+    task: janitor
+    status: G
+    msg: Success

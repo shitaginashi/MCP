@@ -1,0 +1,127 @@
+project_metadata:
+  name: ledger
+  display_name: Core Ledger (Legacy Sage)
+  status: G
+  last_scanned: '2025-12-22'
+  last_updated: 2025-12-30 04:04
+milestones:
+- mark: Project Setup
+  status: Complete
+  requirements:
+  - name: Environment Setup
+    deliverables:
+    - task: Configure Development Environment
+      focus_profile: Deep
+      est_hours: 8.0
+      hours_done: 8
+      status: Complete
+      notes: All tools installed and configured.
+  - name: Project Initialization
+    deliverables:
+    - task: Define Project Scope
+      focus_profile: Deep
+      est_hours: 4.0
+      hours_done: 4
+      status: Complete
+      notes: Initial project planning.
+- mark: Mark I
+  status: Complete
+  requirements:
+  - name: Data Ingestion
+    deliverables:
+    - task: Identify Data Sources
+      focus_profile: Deep
+      est_hours: 6.0
+      hours_done: 6
+      status: Complete
+      notes: Source list compiled.
+    - task: Develop Data Connectors
+      focus_profile: Deep
+      est_hours: 12.0
+      hours_done: 4
+      status: Complete
+      notes: Started on main API connector.
+  - name: Data Processing
+    deliverables:
+    - task: Clean Raw Data
+      focus_profile: Deep
+      est_hours: 10.0
+      hours_done: 0
+      status: Complete
+      notes: Script developed
+- mark: Mark II
+  status: Complete
+  requirements:
+  - name: Model Training
+    deliverables:
+    - task: Gather Training Data
+      focus_profile: Deep
+      est_hours: 16.0
+      hours_done: 0
+      status: Complete
+    - task: Train Initial Model
+      focus_profile: Deep
+      est_hours: 24.0
+      hours_done: 0
+      status: Complete
+- mark: Mark III
+  status: Complete
+  requirements:
+  - name: Support for other project types [video/HTML]
+    deliverables:
+    - task: Create CSV templates for vid
+      focus_profile: Deep
+      est_hours: 0.02
+      hours_done: 0.0179
+      status: Complete
+    - task: Create HTML reports for vid
+      focus_profile: Deep
+      est_hours: 0.02
+      hours_done: 0.0179
+      status: Complete
+- mark: Mark IV
+  status: Complete
+  requirements:
+  - name: JSON Output (Finalized)
+    deliverables:
+    - task: Bypass HTML Generation for JSON
+      focus_profile: Deep
+      est_hours: 0.25
+      hours_done: 0.25
+      status: Complete
+    - task: Develop JSON Data Aggregation
+      focus_profile: Deep
+      est_hours: 1.52
+      hours_done: 1.52
+      status: Complete
+    - task: Filter for Active Projects in JSON
+      focus_profile: Deep
+      est_hours: 0.25
+      hours_done: 0.25
+      status: Complete
+    - task: Implement CLI JSON Output
+      focus_profile: Deep
+      est_hours: 0.5
+      hours_done: 0.5
+      status: Complete
+    - task: Implement Deliverable Percentage Calculation
+      focus_profile: Deep
+      est_hours: 0.96
+      hours_done: 0.96
+      status: Complete
+- mark: Mark V
+  status: Incomplete
+  requirements:
+  - name: YAML Native Migration
+    deliverables:
+    - task: Refactor I/O for YAML
+      focus_profile: Deep
+      est_hours: 4.0
+      hours_done: 0
+      status: Complete
+      notes: clean slate
+    - task: Clean HTML Scraper Tags
+      focus_profile: Maintenance
+      est_hours: 1.5
+      hours_done: 0
+      status: Incomplete

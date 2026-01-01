@@ -1,0 +1,29 @@
+project_metadata:
+  display_name: "Chronos Temporal Manager"
+  agent_role: "Scheduling & Delta Tracking"
+  status: "G"
+  last_updated: "2025-12-31 21:45"
+
+milestones:
+  - mark: "Mark 1: The First Clock"
+    status: "Complete"
+    requirements:
+      - task: "Temporal Orchestration"
+        status: "Complete"
+        deliverables:
+          - task: "RRule integration for Domina"
+            status: "Complete"
+          - task: "Next-occurrence agenda calculation"
+            status: "Complete"
+            
+  - mark: "Mark 2: Delta Awareness"
+    status: "Active"
+    requirements:
+      - task: "Scrape Coordination"
+        status: "In-Progress"
+        deliverables:
+          - task: "Handoff logic to headhunter.py"
+            status: "Complete"
+            notes: "Headhunter executes; Chronos records the timestamp."
+          - task: "Deduplication of results"
+            status: "Pending"

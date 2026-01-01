@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body { font-family: 'Segoe UI', sans-serif; background: #0a0a0a; color: #d1d1d1; margin: 0; overflow: hidden; }
+    .nav-bar {
+        display: flex; justify-content: space-between; align-items: center;
+        background: #111; padding: 12px 25px; border-bottom: 1px solid #00ffcc;
+    }
+    .nav-group { display: flex; gap: 8px; }
+    .nav-title { font-weight: bold; color: #00ffcc; font-size: 1.1em; letter-spacing: 2px; }
+    .nav-btn {
+        background: #1a1a1a; color: #666; border: 1px solid #333;
+        padding: 6px 14px; cursor: pointer; border-radius: 2px; font-size: 0.8em;
+    }
+    .nav-btn.active { border-color: #00ffcc; color: #00ffcc; background: #00332c; }
+    .dashboard-grid {
+        display: grid; grid-template-columns: repeat(7, 1fr);
+        gap: 12px; padding: 20px; height: calc(100vh - 80px);
+    }
+    .day-card { background: #121212; border: 1px solid #222; border-radius: 3px; display: flex; flex-direction: column; }
+    .day-header {
+        background: #1a1a1a; padding: 10px; font-size: 0.8em; font-weight: bold;
+        border-bottom: 1px solid #222; text-align: center; color: #888;
+    }
+    .day-header.today { color: #00ffcc; border-bottom: 2px solid #00ffcc; }
+    .content-area { padding: 10px; overflow-y: auto; flex-grow: 1; }
+    .task { margin-bottom: 8px; padding: 8px; font-size: 0.85em; border-radius: 2px; display: none; }
+    .task.user { border-left: 3px solid #00ffcc; background: #161c1b; }
+    .task.alerts { border-left: 3px solid #ff4444; background: #241414; }
+    .task.system { border-left: 3px solid #44aaff; background: #141924; }
+    .task-label { font-size: 0.7em; font-weight: bold; opacity: 0.5; display: block; margin-bottom: 2px; }
+</style>
+</head>
+<body>
+<nav class="nav-bar">
+    <div class="nav-group">
+        <button class="nav-btn active">MONTH (LUNAR)</button>
+    </div>
+    <div class="nav-title">DOMINA :: COMMAND</div>
+    <div class="nav-group">
+        <button id="btn-user" class="nav-btn" onclick="showType('user')">USER</button>
+        <button id="btn-alerts" class="nav-btn" onclick="showType('alerts')">ALERT</button>
+        <button id="btn-system" class="nav-btn" onclick="showType('system')">SYSTEM</button>
+    </div>
+</nav>
+<div class="dashboard-grid">
+    
+            <div class="day-card">
+                <div class="day-header today">
+                    FRIDAY<br>2025-12-26
+                </div>
+                <div class="content-area">
+                    <div class="task user"><span class="task-label">USER</span>[SYSTEM R] - AWAITING DATA GRAFT</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 01:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 07:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 13:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 22:00 - Y</div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header ">
+                    SATURDAY<br>2025-12-27
+                </div>
+                <div class="content-area">
+                    <div class="task user"><span class="task-label">USER</span>[SYSTEM R] - AWAITING DATA GRAFT</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 01:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 07:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 13:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 22:00 - Y</div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header ">
+                    SUNDAY<br>2025-12-28
+                </div>
+                <div class="content-area">
+                    <div class="task user"><span class="task-label">USER</span>[SYSTEM R] - AWAITING DATA GRAFT</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 01:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 07:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 13:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 22:00 - Y</div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header ">
+                    MONDAY<br>2025-12-29
+                </div>
+                <div class="content-area">
+                    <div class="task user"><span class="task-label">USER</span>[SYSTEM R] - AWAITING DATA GRAFT</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 01:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 07:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 13:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 22:00 - Y</div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header ">
+                    TUESDAY<br>2025-12-30
+                </div>
+                <div class="content-area">
+                    <div class="task user"><span class="task-label">USER</span>[SYSTEM R] - AWAITING DATA GRAFT</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 01:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 07:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 13:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 22:00 - Y</div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header ">
+                    WEDNESDAY<br>2025-12-31
+                </div>
+                <div class="content-area">
+                    <div class="task user"><span class="task-label">USER</span>[SYSTEM R] - AWAITING DATA GRAFT</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 01:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 07:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 13:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 22:00 - Y</div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header ">
+                    THURSDAY<br>2026-01-01
+                </div>
+                <div class="content-area">
+                    <div class="task user"><span class="task-label">USER</span>[SYSTEM R] - AWAITING DATA GRAFT</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 01:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 07:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 13:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 22:00 - Y</div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header ">
+                    FRIDAY<br>2026-01-02
+                </div>
+                <div class="content-area">
+                    <div class="task user"><span class="task-label">USER</span>[SYSTEM R] - AWAITING DATA GRAFT</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 01:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 07:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 13:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 22:00 - Y</div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header ">
+                    SATURDAY<br>2026-01-03
+                </div>
+                <div class="content-area">
+                    <div class="task user"><span class="task-label">USER</span>[SYSTEM R] - AWAITING DATA GRAFT</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 01:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 07:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 13:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 22:00 - Y</div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header ">
+                    SUNDAY<br>2026-01-04
+                </div>
+                <div class="content-area">
+                    <div class="task user"><span class="task-label">USER</span>[SYSTEM R] - AWAITING DATA GRAFT</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 01:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 07:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 13:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 22:00 - Y</div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header ">
+                    MONDAY<br>2026-01-05
+                </div>
+                <div class="content-area">
+                    <div class="task user"><span class="task-label">USER</span>[SYSTEM R] - AWAITING DATA GRAFT</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 01:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 07:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 13:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 22:00 - Y</div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header ">
+                    TUESDAY<br>2026-01-06
+                </div>
+                <div class="content-area">
+                    <div class="task user"><span class="task-label">USER</span>[SYSTEM R] - AWAITING DATA GRAFT</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 01:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 07:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 13:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 22:00 - Y</div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header ">
+                    WEDNESDAY<br>2026-01-07
+                </div>
+                <div class="content-area">
+                    <div class="task user"><span class="task-label">USER</span>[SYSTEM R] - AWAITING DATA GRAFT</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 01:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 07:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 13:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 22:00 - Y</div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header ">
+                    THURSDAY<br>2026-01-08
+                </div>
+                <div class="content-area">
+                    <div class="task user"><span class="task-label">USER</span>[SYSTEM R] - AWAITING DATA GRAFT</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 01:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 07:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 13:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 22:00 - Y</div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header ">
+                    FRIDAY<br>2026-01-09
+                </div>
+                <div class="content-area">
+                    <div class="task user"><span class="task-label">USER</span>[SYSTEM R] - AWAITING DATA GRAFT</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 01:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 07:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 13:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 22:00 - Y</div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header ">
+                    SATURDAY<br>2026-01-10
+                </div>
+                <div class="content-area">
+                    <div class="task user"><span class="task-label">USER</span>[SYSTEM R] - AWAITING DATA GRAFT</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 01:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 07:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 13:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 22:00 - Y</div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header ">
+                    SUNDAY<br>2026-01-11
+                </div>
+                <div class="content-area">
+                    <div class="task user"><span class="task-label">USER</span>[SYSTEM R] - AWAITING DATA GRAFT</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 01:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 07:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 13:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 22:00 - Y</div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header ">
+                    MONDAY<br>2026-01-12
+                </div>
+                <div class="content-area">
+                    <div class="task user"><span class="task-label">USER</span>[SYSTEM R] - AWAITING DATA GRAFT</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 01:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 07:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 13:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 22:00 - Y</div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header ">
+                    TUESDAY<br>2026-01-13
+                </div>
+                <div class="content-area">
+                    <div class="task user"><span class="task-label">USER</span>[SYSTEM R] - AWAITING DATA GRAFT</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 01:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 07:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 13:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 22:00 - Y</div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header ">
+                    WEDNESDAY<br>2026-01-14
+                </div>
+                <div class="content-area">
+                    <div class="task user"><span class="task-label">USER</span>[SYSTEM R] - AWAITING DATA GRAFT</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 01:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 07:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 13:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 22:00 - Y</div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header ">
+                    THURSDAY<br>2026-01-15
+                </div>
+                <div class="content-area">
+                    <div class="task user"><span class="task-label">USER</span>[SYSTEM R] - AWAITING DATA GRAFT</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 01:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 07:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 13:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 22:00 - Y</div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header ">
+                    FRIDAY<br>2026-01-16
+                </div>
+                <div class="content-area">
+                    <div class="task user"><span class="task-label">USER</span>[SYSTEM R] - AWAITING DATA GRAFT</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 01:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 07:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 13:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 22:00 - Y</div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header ">
+                    SATURDAY<br>2026-01-17
+                </div>
+                <div class="content-area">
+                    <div class="task user"><span class="task-label">USER</span>[SYSTEM R] - AWAITING DATA GRAFT</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 01:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 07:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 13:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 22:00 - Y</div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header ">
+                    SUNDAY<br>2026-01-18
+                </div>
+                <div class="content-area">
+                    <div class="task user"><span class="task-label">USER</span>[SYSTEM R] - AWAITING DATA GRAFT</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 01:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 07:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 13:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 22:00 - Y</div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header ">
+                    MONDAY<br>2026-01-19
+                </div>
+                <div class="content-area">
+                    <div class="task user"><span class="task-label">USER</span>[SYSTEM R] - AWAITING DATA GRAFT</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 01:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 07:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 13:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 22:00 - Y</div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header ">
+                    TUESDAY<br>2026-01-20
+                </div>
+                <div class="content-area">
+                    <div class="task user"><span class="task-label">USER</span>[SYSTEM R] - AWAITING DATA GRAFT</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 01:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 07:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 13:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 22:00 - Y</div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header ">
+                    WEDNESDAY<br>2026-01-21
+                </div>
+                <div class="content-area">
+                    <div class="task user"><span class="task-label">USER</span>[SYSTEM R] - AWAITING DATA GRAFT</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 01:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 07:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 13:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 22:00 - Y</div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header ">
+                    THURSDAY<br>2026-01-22
+                </div>
+                <div class="content-area">
+                    <div class="task user"><span class="task-label">USER</span>[SYSTEM R] - AWAITING DATA GRAFT</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 01:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 07:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 13:00 - Y</div><div class="task system"><span class="task-label">SYSTEM</span>Scrape 22:00 - Y</div>
+                </div>
+            </div>
+            
+</div>
+<script>
+function showType(type) {
+    document.querySelectorAll('.nav-group:last-child .nav-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('btn-' + type).classList.add('active');
+    document.querySelectorAll('.task').forEach(t => {
+        t.style.display = t.classList.contains(type) ? 'block' : 'none';
+    });
+}
+window.onload = () => showType('user');
+</script>
+</body>
+</html>

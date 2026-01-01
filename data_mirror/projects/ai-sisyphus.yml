@@ -1,0 +1,34 @@
+project_metadata:
+  display_name: "Sisyphus Mark 3"
+  agent_role: "Intel Refinement & Branding"
+  status: "G"
+  last_updated: "2025-12-31 21:30"
+
+milestones:
+  - mark: "Mark 1: Core Intelligence"
+    status: "Complete"
+    requirements:
+      - task: "JSONL-to-YAML Pipeline"
+        status: "Complete"
+        deliverables:
+          - task: "Stream-based raw feed ingestion"
+            status: "Complete"
+          - task: "Permanent YAML Library persistence"
+            status: "Complete"
+      - task: "Brand Identity Enforcement"
+        status: "Complete"
+        deliverables:
+          - task: "Persona-driven motto injection"
+            status: "Complete"
+          - task: "SEO hashtag superset generation"
+            status: "Complete"
+
+  - mark: "Mark 2: The Gator Nexus"
+    status: "Active"
+    requirements:
+      - task: "Media Interrogation"
+        status: "In-Progress"
+        deliverables:
+          - task: "ONNX Model Path Handshake"
+            status: "Pending"
+            notes: "Needs to point to /data/gator/model.onnx"

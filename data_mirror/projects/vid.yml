@@ -1,0 +1,70 @@
+project_metadata:
+  name: this town
+  display_name: This Town
+  type: video
+  status: active
+  last_updated: 2025-12-30 04:04
+milestones:
+- mark: Video Project Setup
+  status: Incomplete
+  deliverables:
+  - task: Query Video Title
+    focus_profile: Deep
+    est_hours: 5.72
+    hours_done: 4
+    notes: ''
+  - task: Query Home Directory of Video
+    focus_profile: Deep
+    est_hours: 5.72
+    hours_done: 4
+  - task: Query Release Date of Video
+    focus_profile: Deep
+    est_hours: 5.72
+    hours_done: 4
+  - task: Generate Project YAML
+    focus_profile: Deep
+    est_hours: 5.72
+    hours_done: 4
+- mark: Video Editing
+  status: Incomplete
+  deliverables:
+  - task: Generate Content
+    focus_profile: Deep
+    est_hours: 5.72
+    hours_done: 3
+  - task: Generate Score
+    focus_profile: Deep
+    est_hours: 5.72
+    hours_done: 4
+  - task: Edit Video
+    focus_profile: Deep
+    est_hours: 5.72
+    hours_done: 2
+  - task: Lipsync
+    focus_profile: Deep
+    est_hours: 5.72
+    hours_done: 1.32
+- mark: Video Postwork
+  status: Incomplete
+  deliverables:
+  - task: Generate Subtitles
+    focus_profile: Deep
+    est_hours: 5.72
+    hours_done: 4
+  - task: LUT
+    focus_profile: Deep
+    est_hours: 5.72
+    hours_done: 0
+  - task: Upscale to UHD
+    focus_profile: Deep
+    est_hours: 5.72
+    hours_done: 0
+  - task: Generate Metadata
+    focus_profile: Deep
+    est_hours: 5.72
+    hours_done: 0
+logs:
+  user_notes:
+  - date: '2025-12-22'
+    content: Migrated from legacy JSON structure. Flattened hierarchy for Kuro.
+  bugs: []

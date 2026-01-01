@@ -1,0 +1,63 @@
+project_metadata:
+  name: painter
+  display_name: Painter (Visual Command Interface)
+  type: project
+  status: active
+  last_updated: '2025-12-26 20:00' 
+
+milestones:
+  - mark: Mark I (Foundation)
+    status: Complete
+    requirements:
+      - name: UI Construction
+        deliverables:
+          - task: Establish CSS/HTML Command Template
+            status: Complete
+            notes: 7x4 Lunar grid with filtering buttons.
+      - name: Environment Transition
+        deliverables:
+          - task: Flask Implementation (The Fancy Way)
+            status: Complete
+            notes: Moved from static generation to live service.
+      - name: Temporal Stability
+        deliverables:
+          - task: Cross-Quarter Seam Logic
+            status: Complete
+            notes: Seamless transition between 2025-Q4 and 2026-Q1.
+          - task: Cerberus-Aware Self-Healing
+            status: Complete
+            notes: Missing files trigger autonomous regeneration.
+
+  - mark: Mark II (Intelligence)
+    status: Incomplete
+    requirements:
+      - name: Navigation Hardening
+        deliverables:
+          - task: Weekly/Monthly View Toggles
+            status: Incomplete
+            notes: Implement routing and anchor logic for 7 vs 28 day views.
+      - name: Promotion Engine
+        deliverables:
+          - task: In-Memory Alert Duplicate Logic
+            status: Incomplete
+            notes: Filter keywords (!, ALERT, Birthday) into separate view.
+          - task: System R Visibility
+            status: Incomplete
+            notes: Promote [SYSTEM R] grafts to Alert status.
+      - name: Global Awareness
+        deliverables:
+          - task: Project Status Footer
+            status: Incomplete
+            notes: Render global project percentages below the grid.
+
+logs:
+  user_notes:
+    - date: "2025-12-26"
+      content: "Painter stabilized after 'anarchic' clobbering. Environment verified in venv."
+    - date: "2025-12-26"
+      content: "Confirmed functional 2026 bridge. Moved to project-based tracking."
+  bugs:
+    - id: "P-001"
+      issue: "Alerts tab currently inactive in UI after Flask refactor."
+      status: "open"
+      fix_notes: "Needs routing and data-promotion logic."
